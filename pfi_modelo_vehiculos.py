@@ -82,7 +82,12 @@ Menú de opciones:
 
         case "6":
             # reporte de bajo stock
-            print("En desarrollo")
+            limite = int(input("Ingrese el limite de stock"))
+            lista_productos = bd_leer_vehiculos_bajo_stock(limite)
+            if len(lista_productos) > 0:
+                print(lista_productos)
+            else:
+                print("No hay registros que mostrar...")
 
         case "7":
             print("Saliendo...")
